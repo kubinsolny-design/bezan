@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import { ServicePage } from "@/components/ServicePage";
+import { services } from "@/lib/site";
+
+const service = services[2];
+const sales=[["Zemina tříděná","450 Kč","544,50 Kč"],["Zemina netříděná","250 Kč","302,50 Kč"],["Betonový recyklát 0–63 mm","250 Kč","302,50 Kč"],["Betonový recyklát 0–32 mm (na objednávku)","300 Kč","363 Kč"],["Asfaltový recyklát 0–63 mm","150 Kč","181,50 Kč"],["Kačírek 8–22 mm","370 Kč","447,70 Kč"]];
+export const metadata: Metadata = { title: service.title, description: service.description, alternates: { canonical: "/sluzby/recyklace" } };
+export default function Page(){return <ServicePage service={service}><h2>Materiál vracíme do oběhu</h2><p>Od roku 2018 provozujeme zařízení k úpravě a využití stavebního a demoličního odpadu. Přijímáme vybrané odpady a prodáváme recyklované materiály, kamenivo a tříděnou zeminu.</p><div className="note"><strong>Před příjezdem vždy volejte +420 731 414 392.</strong><br/>Telefonicky ověříme možnost uložení konkrétního odpadu i aktuální dostupnost materiálu.</div><h3>Výběr z ceníku prodeje od 1. 8. 2026</h3><div style={{overflowX:"auto"}}><table className="price-table"><thead><tr><th>Materiál</th><th>Bez DPH / t</th><th>Včetně DPH / t</th></tr></thead><tbody>{sales.map(row=><tr key={row[0]}>{row.map(cell=><td key={cell}>{cell}</td>)}</tr>)}</tbody></table></div><p>Ceny jsou uvedeny za 1 tunu. Při větším množství je cena dohodou. Úplný ceník a aktuální dostupnost potvrďte telefonicky.</p><h3>Další služby areálu</h3><ul><li>vážení motorových vozidel do 60 t,</li><li>nakládka do 3 t,</li><li>příjem vybraného stavebního a demoličního odpadu včetně zeminy.</li></ul></ServicePage>}
