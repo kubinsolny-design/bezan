@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+
+export const metadata: Metadata = { title: "Technika", description: "Technické zázemí společnosti BEZAN pro zemní práce, výkopy a manipulaci se stavebním materiálem.", alternates: { canonical: "/technika" } };
+export default function Page(){return <main id="obsah"><section className="page-hero"><div className="wrap page-hero-grid"><div><p className="kicker">Vlastní zázemí</p><h1>Technika</h1><p className="lead">Pro zemní a výkopové práce jsme vybaveni technikou pro hrubé i jemné terénní úpravy.</p><Link className="button" href="/poptavka">Poptat práci</Link></div><div className="page-visual"><Image src="https://www.bezan.cz/images/img2.png" alt="Pásové rypadlo" fill sizes="(max-width: 800px) 100vw, 42vw" /></div></div></section><section className="section"><div className="wrap content-narrow"><h2>Správný stroj pro konkrétní terén</h2><p>Původní web neuvádí spolehlivě ověřitelný kompletní seznam strojů. Konkrétní technické možnosti proto rádi potvrdíme podle rozsahu, přístupnosti a podmínek vaší zakázky.</p><div className="note">Pošlete nám adresu, fotografie místa a stručný popis práce. Ověříme vhodný postup i dostupnost techniky.</div></div></section></main>}
