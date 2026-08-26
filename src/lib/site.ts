@@ -2,7 +2,7 @@ export const site = {
   name: "BEZAN s.r.o.",
   legalName: "BEZAN s.r.o.",
   description: "Zemní a výkopové práce, inženýrské sítě, recyklace stavebního odpadu a další stavební služby ve Frýdku-Místku.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://bezan-web-hehu.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://bezan-frydek-mistek-hehu.vercel.app",
   address: "Dlouhá 491, 738 01 Frýdek-Místek",
   phone: "+420 736 771 517",
   phoneWaste: "+420 731 414 392",
